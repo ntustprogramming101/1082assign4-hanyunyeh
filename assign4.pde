@@ -154,8 +154,10 @@ void setup() {
     cabbageX = new float[nbrCabbage];
     cabbageY = new float[nbrCabbage];
     for (int i = 0 ; i<nbrCabbage ; i++){
-     cabbageX[i] = floor(random(1,8))*80*i;
-     cabbageY[i] = floor(random(2,6))*80*i;
+      for( int j=0; j<nbrCabbage ; j++){
+     cabbageX[i] = floor(random(8))*80;
+     cabbageY[j] = (floor(random(4))+ j*4)*80;
+      }
     }
     
 }
